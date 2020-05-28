@@ -213,7 +213,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0xca2
+.text           0x00000000     0x101e
  *(.vectors)
  .vectors       0x00000000       0x8c C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega128/avr51/crtatmega128.o
                 0x00000000                __vector_default
@@ -306,66 +306,69 @@ END GROUP
                 0x000000c6                __vector_20
                 0x000000c8                . = ALIGN (0x2)
  *(.text.*)
- .text.portini  0x000000c8       0x1a io.o
+ .text.portini  0x000000c8       0x1c io.o
                 0x000000c8                portini
  .text.relay_out
-                0x000000e2       0x78 io.o
-                0x000000e2                relay_out
+                0x000000e4       0x78 io.o
+                0x000000e4                relay_out
  .text.ledblink
-                0x0000015a       0x22 io.o
-                0x0000015a                ledblink
+                0x0000015c       0x22 io.o
+                0x0000015c                ledblink
  .text.timer_setrelayfunc
-                0x0000017c      0x2ba io.o
-                0x0000017c                timer_setrelayfunc
+                0x0000017e      0x36a io.o
+                0x0000017e                timer_setrelayfunc
  .text.set_relay
-                0x00000436      0x1c6 io.o
-                0x00000436                set_relay
+                0x000004e8      0x1c6 io.o
+                0x000004e8                set_relay
  .text.set_relay_mqtt
-                0x000005fc      0x25e io.o
-                0x000005fc                set_relay_mqtt
+                0x000006ae      0x36e io.o
+                0x000006ae                set_relay_mqtt
+ .text.set_mqtt
+                0x00000a1c      0x1a4 io.o
+                0x00000a1c                set_mqtt
  .text.timerini
-                0x0000085a       0x18 timer.o
-                0x0000085a                timerini
+                0x00000bc0       0x18 timer.o
+                0x00000bc0                timerini
  .text.USART_init
-                0x00000872       0x24 UART.o
-                0x00000872                USART_init
+                0x00000bd8       0x24 UART.o
+                0x00000bd8                USART_init
  .text.USART0_receive
-                0x00000896        0x8 UART.o
-                0x00000896                USART0_receive
+                0x00000bfc        0x8 UART.o
+                0x00000bfc                USART0_receive
  .text.USART0_send
-                0x0000089e        0x8 UART.o
-                0x0000089e                USART0_send
+                0x00000c04        0x8 UART.o
+                0x00000c04                USART0_send
  .text.USART0_putstring
-                0x000008a6       0x1c UART.o
-                0x000008a6                USART0_putstring
+                0x00000c0c       0x1c UART.o
+                0x00000c0c                USART0_putstring
  .text.USART1_send
-                0x000008c2       0x10 UART.o
-                0x000008c2                USART1_send
+                0x00000c28       0x10 UART.o
+                0x00000c28                USART1_send
  .text.USART1_putstring
-                0x000008d2       0x1c UART.o
-                0x000008d2                USART1_putstring
+                0x00000c38       0x1c UART.o
+                0x00000c38                USART1_putstring
  .text.MQTT_command_read
-                0x000008ee      0x14a UART.o
-                0x000008ee                MQTT_command_read
- .text.main     0x00000a38       0x34 main.o
-                0x00000a38                main
+                0x00000c54      0x154 UART.o
+                0x00000c54                MQTT_command_read
+ .text.main     0x00000da8        0x8 main.o
+                0x00000da8                main
  .text.__vector_12
-                0x00000a6c      0x1ba main.o
-                0x00000a6c                __vector_12
+                0x00000db0      0x1ea main.o
+                0x00000db0                __vector_12
  .text.__vector_18
-                0x00000c26       0x52 main.o
-                0x00000c26                __vector_18
+                0x00000f9a       0x5a main.o
+                0x00000f9a                __vector_18
  .text.__vector_30
-                0x00000c78       0x14 main.o
-                0x00000c78                __vector_30
+                0x00000ff4       0x14 main.o
+                0x00000ff4                __vector_30
  .text.avr-libc
-                0x00000c8c       0x12 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libc.a(strcmp.o)
-                0x00000c8c                strcmp
-                0x00000c9e                . = ALIGN (0x2)
+                0x00001008       0x12 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/../../../../avr/lib/avr51\libc.a(strcmp.o)
+                0x00001008                strcmp
+                0x0000101a                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00000c9e        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_exit.o)
-                0x00000c9e                _exit
-                0x00000c9e                exit
+ .fini9         0x0000101a        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_exit.o)
+                0x0000101a                _exit
+                0x0000101a                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -384,91 +387,94 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00000c9e        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_exit.o)
+ .fini0         0x0000101a        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr51\libgcc.a(_exit.o)
  *(.fini0)
-                0x00000ca2                _etext = .
+                0x0000101e                _etext = .
 
-.data           0x00800100      0x130 load address 0x00000ca2
+.data           0x00800100      0x1dc load address 0x0000101e
                 0x00800100                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
+ .data.RXREAD_OK
+                0x00800100        0x1 main.o
+                0x00800100                RXREAD_OK
  *(.gnu.linkonce.d*)
  *(.rodata)
  *(.rodata*)
  .rodata.str1.1
-                0x00800100       0x5f io.o
+                0x00800101       0xfb io.o
+                                0x10a (size before relaxing)
  .rodata.str1.1
-                0x0080015f       0x5f UART.o
-                                  0x3 (size before relaxing)
+                0x008001fc        0x2 UART.o
+                                  0x5 (size before relaxing)
  .rodata.str1.1
-                0x0080015f       0xd0 main.o
+                0x008001fe       0xdd main.o
  *(.gnu.linkonce.r*)
-                0x00800230                . = ALIGN (0x2)
- *fill*         0x0080022f        0x1 
-                0x00800230                _edata = .
-                0x00800230                PROVIDE (__data_end, .)
+                0x008002dc                . = ALIGN (0x2)
+ *fill*         0x008002db        0x1 
+                0x008002dc                _edata = .
+                0x008002dc                PROVIDE (__data_end, .)
 
-.bss            0x00800230      0x14a
-                0x00800230                PROVIDE (__bss_start, .)
+.bss            0x008002dc      0x14a
+                0x008002dc                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
- .bss.lampa     0x00800230        0x4 io.o
-                0x00800230                lampa
- .bss.gny       0x00800234        0x4 io.o
-                0x00800234                gny
- .bss.PF5lampa  0x00800238        0x1 io.o
-                0x00800238                PF5lampa
- .bss.PF5gny    0x00800239        0x1 io.o
-                0x00800239                PF5gny
- .bss.PF6lampa  0x0080023a        0x1 io.o
-                0x0080023a                PF6lampa
- .bss.PF6gny    0x0080023b        0x1 io.o
-                0x0080023b                PF6gny
- .bss.PF7lampa  0x0080023c        0x1 io.o
-                0x0080023c                PF7lampa
- .bss.PF7timer  0x0080023d        0x1 io.o
-                0x0080023d                PF7timer
+ .bss.lampa     0x008002dc        0x4 io.o
+                0x008002dc                lampa
+ .bss.gny       0x008002e0        0x4 io.o
+                0x008002e0                gny
+ .bss.PF5lampa  0x008002e4        0x1 io.o
+                0x008002e4                PF5lampa
+ .bss.PF5gny    0x008002e5        0x1 io.o
+                0x008002e5                PF5gny
+ .bss.PF6lampa  0x008002e6        0x1 io.o
+                0x008002e6                PF6lampa
+ .bss.PF6gny    0x008002e7        0x1 io.o
+                0x008002e7                PF6gny
+ .bss.timerPA0  0x008002e8        0x1 io.o
+                0x008002e8                timerPA0
+ .bss.PF7lampa  0x008002e9        0x1 io.o
+                0x008002e9                PF7lampa
+ .bss.PF7timer  0x008002ea        0x1 io.o
+                0x008002ea                PF7timer
  .bss.PF7startidozito
-                0x0080023e        0x1 io.o
-                0x0080023e                PF7startidozito
- .bss.PF7gny    0x0080023f        0x1 io.o
-                0x0080023f                PF7gny
- .bss.PF7tim    0x00800240        0x2 io.o
-                0x00800240                PF7tim
- .bss.tmpled    0x00800242        0x1 io.o
-                0x00800242                tmpled
- .bss.relayout  0x00800243        0x4 io.o
-                0x00800243                relayout
- .bss.RXREAD    0x00800247        0x1 UART.o
-                0x00800247                RXREAD
- .bss.statmp    0x00800248        0x1 UART.o
-                0x00800248                statmp
- .bss.toptmp    0x00800249        0x1 UART.o
-                0x00800249                toptmp
- .bss.sep       0x0080024a        0x1 UART.o
-                0x0080024a                sep
+                0x008002eb        0x1 io.o
+                0x008002eb                PF7startidozito
+ .bss.PF7gny    0x008002ec        0x1 io.o
+                0x008002ec                PF7gny
+ .bss.PF7tim    0x008002ed        0x2 io.o
+                0x008002ed                PF7tim
+ .bss.tmpled    0x008002ef        0x1 io.o
+                0x008002ef                tmpled
+ .bss.relayout  0x008002f0        0x4 io.o
+                0x008002f0                relayout
+ .bss.RXREAD    0x008002f4        0x1 UART.o
+                0x008002f4                RXREAD
+ .bss.statmp    0x008002f5        0x1 UART.o
+                0x008002f5                statmp
+ .bss.toptmp    0x008002f6        0x1 UART.o
+                0x008002f6                toptmp
+ .bss.sep       0x008002f7        0x1 UART.o
+                0x008002f7                sep
  .bss.available
-                0x0080024b        0x1 UART.o
-                0x0080024b                available
- .bss.str       0x0080024c        0x1 UART.o
-                0x0080024c                str
- .bss.RXREAD_OK
-                0x0080024d        0x1 main.o
-                0x0080024d                RXREAD_OK
+                0x008002f8        0x1 UART.o
+                0x008002f8                available
+ .bss.str       0x008002f9        0x1 UART.o
+                0x008002f9                str
  *(COMMON)
- COMMON         0x0080024e      0x12c UART.o
-                0x0080024e                state
-                0x008002b2                topic
-                0x00800316                RXstring
-                0x0080037a                PROVIDE (__bss_end, .)
-                0x00000ca2                __data_load_start = LOADADDR (.data)
-                0x00000dd2                __data_load_end = (__data_load_start + SIZEOF (.data))
+ COMMON         0x008002fa      0x12c UART.o
+                0x008002fa                state
+                0x0080035e                topic
+                0x008003c2                RXstring
+                0x00800426                PROVIDE (__bss_end, .)
+                0x0000101e                __data_load_start = LOADADDR (.data)
+                0x000011fa                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x0080037a        0x0
+.noinit         0x00800426        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
  *(.noinit*)
                 [!provide]                PROVIDE (__noinit_end, .)
-                0x0080037a                _end = .
+                0x00800426                _end = .
                 [!provide]                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
@@ -536,68 +542,68 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000       0xf8
+.debug_aranges  0x00000000      0x100
  *(.debug_aranges)
  .debug_aranges
-                0x00000000       0x48 io.o
+                0x00000000       0x50 io.o
  .debug_aranges
-                0x00000048       0x20 timer.o
+                0x00000050       0x20 timer.o
  .debug_aranges
-                0x00000068       0x58 UART.o
+                0x00000070       0x58 UART.o
  .debug_aranges
-                0x000000c0       0x38 main.o
+                0x000000c8       0x38 main.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x1ac8
+.debug_info     0x00000000     0x20fe
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x780 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega128/avr51/crtatmega128.o
- .debug_info    0x00000780      0xa3f io.o
- .debug_info    0x000011bf       0x82 timer.o
- .debug_info    0x00001241      0x2da UART.o
- .debug_info    0x0000151b      0x5ad main.o
+ .debug_info    0x00000780     0x10c7 io.o
+ .debug_info    0x00001847       0x82 timer.o
+ .debug_info    0x000018c9      0x2da UART.o
+ .debug_info    0x00001ba3      0x55b main.o
 
-.debug_abbrev   0x00000000      0xbbd
+.debug_abbrev   0x00000000      0xb82
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x718 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega128/avr51/crtatmega128.o
- .debug_abbrev  0x00000718      0x197 io.o
- .debug_abbrev  0x000008af       0x4f timer.o
- .debug_abbrev  0x000008fe      0x14a UART.o
- .debug_abbrev  0x00000a48      0x175 main.o
+ .debug_abbrev  0x00000718      0x1c4 io.o
+ .debug_abbrev  0x000008dc       0x4f timer.o
+ .debug_abbrev  0x0000092b      0x14a UART.o
+ .debug_abbrev  0x00000a75      0x10d main.o
 
-.debug_line     0x00000000      0xbd7
+.debug_line     0x00000000      0xd83
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x169 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega128/avr51/crtatmega128.o
- .debug_line    0x00000169      0x4ee io.o
- .debug_line    0x00000657       0xc0 timer.o
- .debug_line    0x00000717      0x2bc UART.o
- .debug_line    0x000009d3      0x204 main.o
+ .debug_line    0x00000169      0x6ff io.o
+ .debug_line    0x00000868       0xc0 timer.o
+ .debug_line    0x00000928      0x2bc UART.o
+ .debug_line    0x00000be4      0x19f main.o
 
-.debug_frame    0x00000000      0x2c4
+.debug_frame    0x00000000      0x308
  *(.debug_frame)
- .debug_frame   0x00000000       0xec io.o
- .debug_frame   0x000000ec       0x24 timer.o
- .debug_frame   0x00000110       0xbc UART.o
- .debug_frame   0x000001cc       0xf8 main.o
+ .debug_frame   0x00000000      0x128 io.o
+ .debug_frame   0x00000128       0x24 timer.o
+ .debug_frame   0x0000014c       0xbc UART.o
+ .debug_frame   0x00000208      0x100 main.o
 
-.debug_str      0x00000000      0x614
+.debug_str      0x00000000      0x5eb
  *(.debug_str)
  .debug_str     0x00000000      0x27d C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.2.209/gcc/dev/atmega128/avr51/crtatmega128.o
- .debug_str     0x0000027d      0x261 io.o
-                                0x2ab (size before relaxing)
- .debug_str     0x000004de       0x16 timer.o
+ .debug_str     0x0000027d      0x27a io.o
+                                0x2c4 (size before relaxing)
+ .debug_str     0x000004f7       0x16 timer.o
                                 0x186 (size before relaxing)
- .debug_str     0x000004f4       0x9f UART.o
+ .debug_str     0x0000050d       0x9f UART.o
                                 0x242 (size before relaxing)
- .debug_str     0x00000593       0x81 main.o
-                                0x280 (size before relaxing)
+ .debug_str     0x000005ac       0x3f main.o
+                                0x23e (size before relaxing)
 
-.debug_loc      0x00000000      0x7ca
+.debug_loc      0x00000000      0x8f7
  *(.debug_loc)
- .debug_loc     0x00000000      0x465 io.o
- .debug_loc     0x00000465      0x13e UART.o
- .debug_loc     0x000005a3      0x227 main.o
+ .debug_loc     0x00000000      0x5cd io.o
+ .debug_loc     0x000005cd      0x13e UART.o
+ .debug_loc     0x0000070b      0x1ec main.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -617,12 +623,12 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x00000000       0xb8
+.debug_ranges   0x00000000       0xc0
  *(.debug_ranges)
- .debug_ranges  0x00000000       0x38 io.o
- .debug_ranges  0x00000038       0x10 timer.o
- .debug_ranges  0x00000048       0x48 UART.o
- .debug_ranges  0x00000090       0x28 main.o
+ .debug_ranges  0x00000000       0x40 io.o
+ .debug_ranges  0x00000040       0x10 timer.o
+ .debug_ranges  0x00000050       0x48 UART.o
+ .debug_ranges  0x00000098       0x28 main.o
 
 .debug_macro
  *(.debug_macro)

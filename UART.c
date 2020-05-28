@@ -104,18 +104,22 @@ if (RXstring[str]=='\n')
 			if(sep==0) str++;
 		}
 		
- 		USART1_putstring(state);
+		USART1_putstring(topic);
+		USART1_putstring(" ");
+		USART1_putstring(state);
 		USART1_putstring("\n\r");
- 		USART1_putstring(topic);
-		USART1_putstring("\n\r");
-		
+
 		available=0;
 		str=0;
 		RXREAD=1;
-		return RXREAD;
-		
 		
 	}
-	else str++;
-
+	else
+	{
+	str++;
+	RXREAD=2;
+	}
+	
+	
+return RXREAD;
 }

@@ -9,7 +9,12 @@
 #ifndef INCFILE1_H_
 #define INCFILE1_H_
 
-#define F_CPU 8000000UL
+#define F_CPU 16000000UL
+
+#define Status_PA1 (!(lampa&((uint32_t)1<<TMPPF6)))  // ha on akkor nem igaz
+#define Setstatus_PA1 (lampa|=((uint32_t)1<<TMPPF6)) // status beállitása
+
+#define Status_PA2 (!(lampa&((uint32_t)1<<TMPPF5)))
 
 #define RelayPA0 1
 #define RelayPA1 2
@@ -34,7 +39,7 @@
 
 #define PUSHTIME 7 //hosszu gombnyomások definiálása 700 ms 
 
-#define PF7TIMER 1800 // másodperc mennyi ideig legyen bekapcsolva ?
+#define PF7TIMER 1400 // másodperc mennyi ideig legyen bekapcsolva ?
 
 
 #define TMPPF7 7
@@ -89,8 +94,8 @@
 #define INPB4 ((~PINB)&(1<<PB4))
 #define INPB3 ((~PINB)&(1<<PB3))
 #define INPB2 ((~PINB)&(1<<PB2))
-#define INPB1 ((~PINB)&(1<<PB4))
-#define INPB0 ((~PINB)&(1<<PB1))
+#define INPB1 ((~PINB)&(1<<PB1))
+#define INPB0 ((~PINB)&(1<<PB0))
 
 #define INPG0 ((~PING)&(1<<PG0))
 #define INPG1 ((~PING)&(1<<PG1))

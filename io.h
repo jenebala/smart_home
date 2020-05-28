@@ -17,5 +17,7 @@ void ledblink(uint8_t blinkfreq);
 void timer_setrelayfunc();
 void set_relay(uint8_t readpin,uint32_t setrelay,uint8_t intmp,char *mqttcommand);
 void set_relay_mqtt(char* topic,char* state);
+void set_mqtt(uint8_t readpin,uint8_t intmp,char *mqttcommand);
+
 
 #endif /* IO_H_ */
